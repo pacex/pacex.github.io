@@ -1,4 +1,54 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Pascal Walloner'
 theme = 'Hugo-Octopress'
+
+[[menu.main]]
+  Name = "Blog"
+  URL = "/"
+  weight = -10
+
+[[menu.main]]
+  Name = "About"
+  URL = "/about"
+
+
+# [[menu.sidebar]]
+#   Name = "Google"
+#   URL = "https://www.google.com"
+#   weight = 0
+
+# [[menu.sidebar]]
+#   Name = "Hugo"
+#  URL = "/categories/hugo/"
+#   weight = 1
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # Allow HTML in md files
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+
+
+[params]
+  # If set to true, navigation menu links will open in a new window with the exception of links to root ("/")
+  # If this item does not exist or is set to false, then navigation menu links will open in the same window
+  navigationNewWindow = false
+
+  math = true
+
+
+  sidebarMenuEnabled = true
+  sidebarHeader = "Links:"
+  # sidebarText = "Lorem ipsum dolor sit amed."
+
+  github = "https://github.com/pacex"
+  twitter= "https://twitter.com/paceistooshort"
+
+  [params.author]
+    name = "Pascal Walloner"
