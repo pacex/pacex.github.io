@@ -2,6 +2,7 @@ baseURL = 'https://pascalwalloner.com/'
 languageCode = 'en-us'
 title = 'Pascal Walloner'
 theme = 'Hugo-Octopress'
+googleAnalytics = "G-SET02QW01R"
 
 [[menu.main]]
   Name = "Blog"
