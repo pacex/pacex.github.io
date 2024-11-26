@@ -15,7 +15,7 @@ This method is not only much more efficient than animating 3D models frame by fr
 
 With this article, I hope to provide an approachable introduction about the core concepts behind skeletal animation.
 We will explore what the skeleton structure actually is and how we can use it to move parts of our model.
-Since some parts of the process are simpler to understand by taking a look at an example, we will walk through the skeleton structure and animation of a [simple robot model by Satendra Saraswat](https://sketchfab.com/3d-models/lowpoly-robots-7181d9e5ba434aa59dc7b9042c9723df).
+Since some parts of the process are simpler to understand by taking a look at an example, we will walk through the skeleton structure and animation of a simple robot model by Satendra Saraswat[^1].
 By the end of this article you'll be equipped with the fundamental principles that allow you to implement a skeletal animation system into your own game or game engine.
 
 # Prerequisites
@@ -223,5 +223,7 @@ Interesting ideas to continue with might include:
     <li> Inverse Kinematics to automatically adjust the skeleton's pose based on the desired position of a hand or foot
     <li> Procedural Animation
 </ul>
+
+[^1]: "[Lowpoly Robots](https://skfb.ly/6XLPW)" by Satendra Saraswat is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/).
 
 
