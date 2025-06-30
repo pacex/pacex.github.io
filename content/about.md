@@ -5,7 +5,7 @@ draft = false
 +++
 
 <div style="text-align: center;">
-  <img src="/profile.jpeg" width="200" height="200" alt="Profile picture">
+  <img src="/profile.jpeg" width="200" alt="Profile picture">
 </div>
 
 Hello! My name is Pascal and I am a recent Computer Science graduate who now works as a software developer with a focus on 3D visualization.
