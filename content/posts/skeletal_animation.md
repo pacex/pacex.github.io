@@ -31,7 +31,11 @@ The bones the skeleton consists of will be the units we will be able to move dur
 So, if we want the wrist of the character to move independently of the rest of the arm, we have to give it its own bone.
 This is what a skeleton for the robot may look like:
 
-<img src="/blog/skeletal_animation/skeleton.PNG" width="600">
+
+<div style="text-align: center;">
+  <img src="/blog/skeletal_animation/skeleton.PNG" width="600">
+</div>
+
 
 The skeleton in the picture above is in its default pose.
 Moving it into different poses should move the model's vertices with it.
@@ -50,7 +54,9 @@ To keep track of its place in the hierarchy, each bone holds a list of bones tha
 The image below gives a schematic overview of the robot model's bone hierarchy.
 Arrows point down the hierarchy, meaning each arrow coming from a bone in the image represents an entry in the bone's list of children.
 
-<img src="/blog/skeletal_animation/hierarchy.png" width="600">
+<div style="text-align: center;">
+  <img src="/blog/skeletal_animation/hierarchy.PNG" width="600">
+</div>
 
 The other two properties are transforms, which we store as 4x4 matrices.
 The offset transform \(\text{off}_b\) describes the transformation from model to bone space, i.e. how we find the position of a vertex in relation to bone \(b\).
@@ -195,7 +201,9 @@ To find the pose of the skeleton _between_ two keyframes, we have to blend the p
 The most straight forward way to do this is using linear interpolation.
 The image below shows what an animation timeline with 3 keyframes could look like:
 
-<img src="/blog/skeletal_animation/timeline.png" width="600">
+<div style="text-align: center;">
+  <img src="/blog/skeletal_animation/timeline.PNG" width="600">
+</div>
 
 To find the skeleton's pose at time \(t\), we need to interpolate between keyframes \(k_0\) and \(k_1\).
 The image also shows the time intervals between \(t\) and the key frames that we can use to determine how close the blended pose should be to either of the keyframes.

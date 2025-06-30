@@ -2,25 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Pascal Walloner</title>
-    <link>https://example.org/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Pascal Walloner</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 17 Feb 2024 22:45:15 +0100</lastBuildDate>
-    <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Testpost2</title>
-      <link>https://example.org/posts/testpost2/</link>
-      <pubDate>Sat, 17 Feb 2024 22:45:15 +0100</pubDate>
-      <guid>https://example.org/posts/testpost2/</guid>
-      <description>Introduction 222 This is bold text, and this is emphasized text.&#xA;Visit the Hugo website!</description>
-    </item>
-    <item>
-      <title>Testpost</title>
-      <link>https://example.org/posts/testpost/</link>
-      <pubDate>Sat, 17 Feb 2024 21:03:11 +0100</pubDate>
-      <guid>https://example.org/posts/testpost/</guid>
-      <description>Introduction This is bold text, and this is emphasized text.&#xA;Visit the Hugo website!</description>
+      <title>Bringing Characters to Life: The Fundamentals of Skeletal Animation</title>
+      <link>http://localhost:1313/posts/skeletal_animation/</link>
+      <pubDate>Fri, 22 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/skeletal_animation/</guid>
+      <description>&lt;p&gt;When rendering a 3D game&amp;rsquo;s world, static meshes are often sufficient for modeling the environment like terrain, buildings and other objects.&#xA;However, if we want it to appear inhabited, we won&amp;rsquo;t get around filling the world with creatures and characters that move and interact.&#xA;This is where animation comes into play.&lt;/p&gt;&#xA;&lt;p&gt;2D games typically realize such animations by displaying different sprite images in quick succession to create the illusion of motion.&#xA;Composing a 3D animation of individual frames in a similar way, however, quickly becomes impractical due to the sheer amount of data.&#xA;Instead, 3D games use an underlying bone structure to control a model&amp;rsquo;s movement in a technique called &lt;em&gt;skeletal animation&lt;/em&gt;.&#xA;This method is not only much more efficient than animating 3D models frame by frame, but also provides a more flexible workflow when animating and allows for perfectly smooth motion through interpolation.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

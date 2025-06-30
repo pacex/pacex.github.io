@@ -1,7 +1,7 @@
 baseURL = 'https://pascalwalloner.com/'
 languageCode = 'en-us'
 title = 'Pascal Walloner'
-theme = 'Hugo-Octopress'
+theme = 'mini'
 googleAnalytics = "G-SET02QW01R"
 
 [[menu.main]]
