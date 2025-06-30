@@ -33,7 +33,7 @@ This is what a skeleton for the robot may look like:
 
 
 <div style="text-align: center;">
-  <img src="/blog/skeletal_animation/skeleton.PNG" width="600">
+  <img src="/blog/skeletal_animation/skeleton.PNG" style="width: 100%; max-width: 600px;">
 </div>
 
 
@@ -55,7 +55,7 @@ The image below gives a schematic overview of the robot model's bone hierarchy.
 Arrows point down the hierarchy, meaning each arrow coming from a bone in the image represents an entry in the bone's list of children.
 
 <div style="text-align: center;">
-  <img src="/blog/skeletal_animation/hierarchy.png" width="600">
+  <img src="/blog/skeletal_animation/hierarchy.png" style="width: 100%; max-width: 600px;">
 </div>
 
 The other two properties are transforms, which we store as 4x4 matrices.
@@ -202,7 +202,7 @@ The most straight forward way to do this is using linear interpolation.
 The image below shows what an animation timeline with 3 keyframes could look like:
 
 <div style="text-align: center;">
-  <img src="/blog/skeletal_animation/timeline.png" width="600">
+  <img src="/blog/skeletal_animation/timeline.png" style="width: 100%; max-width: 600px;">
 </div>
 
 To find the skeleton's pose at time \(t\), we need to interpolate between keyframes \(k_0\) and \(k_1\).
