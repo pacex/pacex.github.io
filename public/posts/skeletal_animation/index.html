@@ -121,7 +121,7 @@ To keep track of its place in the hierarchy, each bone holds a list of bones tha
 The image below gives a schematic overview of the robot model&rsquo;s bone hierarchy.
 Arrows point down the hierarchy, meaning each arrow coming from a bone in the image represents an entry in the bone&rsquo;s list of children.</p>
 <div style="text-align: center;">
-  <img src="/blog/skeletal_animation/hierarchy.PNG" width="600">
+  <img src="/blog/skeletal_animation/hierarchy.png" width="600">
 </div>
 <p>The other two properties are transforms, which we store as 4x4 matrices.
 The offset transform \(\text{off}_b\) describes the transformation from model to bone space, i.e. how we find the position of a vertex in relation to bone \(b\).
@@ -251,7 +251,7 @@ To find the pose of the skeleton <em>between</em> two keyframes, we have to blen
 The most straight forward way to do this is using linear interpolation.
 The image below shows what an animation timeline with 3 keyframes could look like:</p>
 <div style="text-align: center;">
-  <img src="/blog/skeletal_animation/timeline.PNG" width="600">
+  <img src="/blog/skeletal_animation/timeline.png" width="600">
 </div>
 <p>To find the skeleton&rsquo;s pose at time \(t\), we need to interpolate between keyframes \(k_0\) and \(k_1\).
 The image also shows the time intervals between \(t\) and the key frames that we can use to determine how close the blended pose should be to either of the keyframes.
