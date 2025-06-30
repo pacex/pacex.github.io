@@ -53,3 +53,7 @@ googleAnalytics = "G-SET02QW01R"
 
   [params.author]
     name = "Pascal Walloner"
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
