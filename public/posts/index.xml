@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Pascal Walloner</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Jun 2025 22:07:40 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pixel Perfect Lighting</title>
+      <link>http://localhost:1313/posts/pixel_perfect_lighting/</link>
+      <pubDate>Mon, 30 Jun 2025 22:07:40 +0200</pubDate>
+      <guid>http://localhost:1313/posts/pixel_perfect_lighting/</guid>
+      <description>&lt;p&gt;Lorem Ipsum&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Bringing Characters to Life: The Fundamentals of Skeletal Animation</title>
       <link>http://localhost:1313/posts/skeletal_animation/</link>
