@@ -7,4 +7,8 @@ draft: false
 
 ---
 
-Lorem Ipsum
+<script src="/blog/pixel_perfect_lighting/draw.js"></script>
+
+<body onload="init()">
+    <canvas id="cubeUVs" width="640" height="480">
+</body>
