@@ -4,6 +4,43 @@ date = 2025-07-19
 draft = false
 +++
 
+## Movie NX
+
+2025, *Professional*
+
+<figure style="width: 100%; max-width: 800px; margin: 0;">
+<div style="
+  width: 100%;
+  max-width: 900px;
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+">
+  <img src="https://www.ipg-automotive.com/fileadmin/data/products_and_solutions/software/movienx/san-francisco-tram-line-sunset.jpg" style="
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  ">
+</div>
+<figcaption style="
+    font-size: 0.6em;
+    color: #666;
+    text-align: center;
+    margin-top: 0.3em;
+  ">
+    Image source: <a href="https://www.ipg-automotive.com/en/products-solutions/software/movienx/" target="_blank" rel="noopener">IPG Automotive</a>
+  </figcaption>
+</figure>
+
+As a software developer at IPG Automotive I contribute to the development of Movie NX, the visualization tool for their automotive simulation software CarMaker.
+
+[Movie NX](https://www.ipg-automotive.com/en/products-solutions/software/movienx/)
+
+---
+
 ## Neural Surface Compression
 
 2024, *Research, Education, Master Thesis*
