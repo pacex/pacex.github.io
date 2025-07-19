@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Projects | Pascal Walloner</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="Neural Surface Compression 🔗2024, Research, Education, Master Thesis
+Neural compression models are not restricted to texture space inputs.
+This is a research piece on a neural texture compression method that parameterizes material data on the object&rsquo;s surface, circumventing the need for UV-mapping.
+I examine if the method can achieve sufficient visual quality at high compression rates without the requiring 3D models to be UV-mapped.
+Paper, Source
+
+Volumetric Cloud Renderer 🔗2023, Education
+
+  
+
+A volumetric cloud renderer written in C&#43;&#43; using OpenGL.
+My implementation marches along view rays and samples a 3D gradient noise function as cloud density.
+Accumulated density samples serve as transmittance estimates to compute shading.
+We optimize via transmittance-dependent step sizes and mitigate artifacts using blue noise sample offsets.">
+<meta name="generator" content="Hugo 0.147.9">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+
+
+
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/"> <span class="arrow">←</span>Home</a>
+	
+	<a href="/posts">Archive</a>
+	
+	<a href="/projects">Projects</a>
+	<a href="/about">About</a>
+
+	
+
+	
+</nav>
+
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">Projects</h1>
+
+    <div class="tip">
+        <time datetime="2025-07-19 00:00:00 &#43;0000 UTC">Jul 19, 2025</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          348 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          2 minute read
+        </span>
+    </div>
+
+    
+    
+
+
+    <div class="content">
+      <h2 id="neural-surface-compression">Neural Surface Compression <a href="#neural-surface-compression" class="anchor">🔗</a></h2><p>2024, <em>Research, Education, Master Thesis</em></p>
+<p>Neural compression models are not restricted to texture space inputs.
+This is a research piece on a neural texture compression method that parameterizes material data on the object&rsquo;s surface, circumventing the need for UV-mapping.
+I examine if the method can achieve sufficient visual quality at high compression rates without the requiring 3D models to be UV-mapped.</p>
+<p><a href="https://gupea.ub.gu.se/handle/2077/84873" target="_blank" rel="noopener">Paper</a>, <a href="https://github.com/pacex/neural-surface" target="_blank" rel="noopener">Source</a></p>
+<hr>
+<h2 id="volumetric-cloud-renderer">Volumetric Cloud Renderer <a href="#volumetric-cloud-renderer" class="anchor">🔗</a></h2><p>2023, <em>Education</em></p>
+<div style="text-align: center;">
+  <img src="/projects/clouds.png" style="width: 100%; max-width: 900px;">
+</div>
+<p>A volumetric cloud renderer written in C++ using OpenGL.
+My implementation marches along view rays and samples a 3D gradient noise function as cloud density.
+Accumulated density samples serve as transmittance estimates to compute shading.
+We optimize via transmittance-dependent step sizes and mitigate artifacts using blue noise sample offsets.</p>
+<p><a href="https://github.com/pacex/gpuClouds" target="_blank" rel="noopener">Source</a></p>
+<hr>
+<h2 id="shard-engine">Shard Engine <a href="#shard-engine" class="anchor">🔗</a></h2><p>2023, <em>Education</em></p>
+<p>Extension to the Shard Game Engine that enables 3D rendering through OpenGL.
+We extend the engine API to support 3D transforms, meshes, shaders, textures and cameras and adapt the existing collision and physics system.</p>
+<p><a href="https://github.com/pacex/ShardEngineOpenGL" target="_blank" rel="noopener">Source</a></p>
+<hr>
+<h2 id="javalette-compiler">Javalette Compiler <a href="#javalette-compiler" class="anchor">🔗</a></h2><p>2023, <em>Education</em></p>
+<p>Javalette is a simplified toy programming language similar to Java.
+I implement a compiler for Javalette that builds a syntax tree to parse a given program into LLVM instructions.</p>
+<p><a href="https://github.com/pacex/JavaletteCompiler" target="_blank" rel="noopener">Source</a></p>
+<hr>
+<h2 id="water-surface-shader">Water Surface Shader <a href="#water-surface-shader" class="anchor">🔗</a></h2><p>2022, <em>Contest</em></p>
+<div style="text-align: center;">
+  <img src="/projects/ocean.png" style="width: 100%; max-width: 900px;">
+</div>
+<p>This project is my entry to <a href="https://x.com/XorDev/status/1568277920698753026" target="_blank" rel="noopener">XOR&rsquo;s fluid challange</a>.
+The task is to develop a fluid effect using GameMaker.
+My submission is a water surface renderer that uses trochoidal waves, cube-maps and screen space reflections to create a believable visual impression.</p>
+<p><a href="https://github.com/pacex/GMSOceanSurface" target="_blank" rel="noopener">Source</a>, <a href="https://x.com/XorDev/status/1568277920698753026" target="_blank" rel="noopener">Challenge</a></p>
+<hr>
+<h2 id="accelerating-particle-ray-tracing">Accelerating Particle Ray Tracing <a href="#accelerating-particle-ray-tracing" class="anchor">🔗</a></h2><p>2022, <em>Research, Education, Bachelor Thesis</em></p>
+<div style="text-align: center;">
+  <img src="/projects/particle.png" style="width: 100%; max-width: 800px;">
+</div>
+<p>P-k-d trees are an efficient acceleration structure specific to ray tracing of particle data.
+I examine if early termination through probabilistic occlusion culling can accelerate the traversal of P-k-d trees while keeping sufficient visual quality.</p>
+<p><a href="https://elib.uni-stuttgart.de/items/97443d42-34da-483f-a23d-a6f2a46559fd" target="_blank" rel="noopener">Paper</a>, <a href="https://github.com/pacex/rtxpkd_ldav2020" target="_blank" rel="noopener">Source</a></p>
+<hr>
+<h2 id="route-planner">Route Planner <a href="#route-planner" class="anchor">🔗</a></h2><p>2019, <em>Education</em></p>
+<p>A web-based route planner using Dijkstra path finding.</p>
+<p><a href="https://github.com/pacex/route_planner" target="_blank" rel="noopener">Source</a></p>
+<hr>
+<h2 id="willys-wine">Willy&rsquo;s Wine <a href="#willys-wine" class="anchor">🔗</a></h2><p>2018, <em>Contest, Game Jam</em></p>
+<div style="text-align: center;">
+  <img src="/projects/willy.png" style="width: 100%; max-width: 800px;">
+</div>
+<p>I made this puzzle game as my entry to the <a href="http://youtu.be/XBQhFZ4F56o?t=2h52m47s" target="_blank" rel="noopener">11th Game++ Community Challenge</a> hosted by <a href="http://www.youtube.com/channel/UCSTSJT-X8obSxoJ7ySioGXQ" target="_blank" rel="noopener">LetsGameDev</a>.
+It is a memory puzzle about building a bridge by stacking crates so that Willy can reach his beloved wine barrel.</p>
+<p><a href="https://pacex.itch.io/willyswine" target="_blank" rel="noopener">Game</a>, <a href="http://youtu.be/XBQhFZ4F56o?t=2h52m47s" target="_blank" rel="noopener">Game Jam</a></p>
+
+    </div>
+
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+
+    <div class="copyright">
+    
+       © Copyright 
+       2025 
+       
+       Pascal Walloner
+    
+    </div>
+
+    
+      <div class="powerby">
+        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
+      </div>
+    
+    <p><a href="/license/">License</a></p>
+</footer>
+
+
+
+  </body>
+</html>
