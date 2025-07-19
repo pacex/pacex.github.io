@@ -6,8 +6,15 @@
     <description>Recent content on Pascal Walloner</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Projects</title>
+      <link>http://localhost:1313/projects/</link>
+      <pubDate>Sat, 19 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/</guid>
+      <description>&lt;h2 id=&#34;neural-surface-compression&#34;&gt;Neural Surface Compression &lt;a href=&#34;#neural-surface-compression&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;2024, &lt;em&gt;Research, Education, Master Thesis&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Neural compression models are not restricted to texture space inputs.&#xA;This is a research piece on a neural texture compression method that parameterizes material data on the object&amp;rsquo;s surface, circumventing the need for UV-mapping.&#xA;I examine if the method can achieve sufficient visual quality at high compression rates without the requiring 3D models to be UV-mapped.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://gupea.ub.gu.se/handle/2077/84873&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Paper&lt;/a&gt;, &lt;a href=&#34;https://github.com/pacex/neural-surface&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;volumetric-cloud-renderer&#34;&gt;Volumetric Cloud Renderer &lt;a href=&#34;#volumetric-cloud-renderer&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;2023, &lt;em&gt;Education&lt;/em&gt;&lt;/p&gt;&#xA;&lt;div style=&#34;text-align: center;&#34;&gt;&#xD;&#xA;  &lt;img src=&#34;http://localhost:1313/projects/clouds.png&#34; style=&#34;width: 100%; max-width: 900px;&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;p&gt;A volumetric cloud renderer written in C++ using OpenGL.&#xA;My implementation marches along view rays and samples a 3D gradient noise function as cloud density.&#xA;Accumulated density samples serve as transmittance estimates to compute shading.&#xA;We optimize via transmittance-dependent step sizes and mitigate artifacts using blue noise sample offsets.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>About</title>
       <link>http://localhost:1313/about/</link>

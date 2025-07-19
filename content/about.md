@@ -14,4 +14,4 @@ Sometimes, I try my hand at writing accessible explainers about the topics I am 
 I'm always open to feedback and questions!
 
 
-Contact me by sending an e-mail to [contact@pascalwalloner.com](mailto:contact@pascalwalloner.com) or visit my [GitHub](https://github.com/pacex) to see my previous work.
+Contact me by sending an e-mail to [contact@pascalwalloner.com](mailto:contact@pascalwalloner.com) or see my previous [projects](../projects) on [GitHub](https://github.com/pacex).
