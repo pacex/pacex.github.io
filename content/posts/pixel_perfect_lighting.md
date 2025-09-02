@@ -7,6 +7,7 @@ draft: false
 
 ---
 
+<script src="/blog/pixel_perfect_lighting/gl-matrix-min.js"></script>
 <script src="/blog/pixel_perfect_lighting/draw.js"></script>
 
 <body onload="init()">
