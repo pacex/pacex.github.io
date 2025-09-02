@@ -177,7 +177,7 @@ function tick(currentTime){
         return -1
     }
 
-    GL.clearColor(0.0, 0.0, 0.0, 1.0);
+    GL.clearColor(1.0, 1.0, 1.0, 1.0);
     GL.clear(GL.COLOR_BUFFER_BIT);
 
     const m4 = glMatrix.mat4
