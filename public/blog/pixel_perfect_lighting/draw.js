@@ -1,10 +1,4 @@
-let GL = -1
-let CANVAS = -1
-
 // Load shaders
-
-let PROGRAM = -1
-
 async function loadShaderSource(url){
     const response = await fetch(url + '?nocache=' + Date.now);
     if (!response.ok){
@@ -13,9 +7,9 @@ async function loadShaderSource(url){
     return await response.text()
 }
 
-async function initShaders(vertexPath, fragmentPath){
+async function initShaders(gl, vertexPath, fragmentPath){
 
-    if (GL < 0){
+    if (gl < 0){
         alert("GL context not initialized.")
         return -1
     }
@@ -30,45 +24,45 @@ async function initShaders(vertexPath, fragmentPath){
     console.log(fragmentSource)
 
     // Create and compile shaders
-    var vertexShader = GL.createShader(GL.VERTEX_SHADER);
-    GL.shaderSource(vertexShader, vertexSource);
-    GL.compileShader(vertexShader);
+    var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+    gl.shaderSource(vertexShader, vertexSource);
+    gl.compileShader(vertexShader);
 
-    var fragmentShader = GL.createShader(GL.FRAGMENT_SHADER);
-    GL.shaderSource(fragmentShader, fragmentSource);
-    GL.compileShader(fragmentShader);
+    var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+    gl.shaderSource(fragmentShader, fragmentSource);
+    gl.compileShader(fragmentShader);
 
-    if (!GL.getShaderParameter(vertexShader, GL.COMPILE_STATUS)){
-        alert("Error compiling vertex shader: " + GL.getShaderInfoLog(vertexShader));
+    if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)){
+        alert("Error compiling vertex shader: " + gl.getShaderInfoLog(vertexShader));
         return -1;
     }
-    if (!GL.getShaderParameter(fragmentShader, GL.COMPILE_STATUS)){
-        alert("Error compiling fragment shader: " + GL.getShaderInfoLog(fragmentShader));
+    if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)){
+        alert("Error compiling fragment shader: " + gl.getShaderInfoLog(fragmentShader));
         return -1;
     }
 
-    var glProgram = GL.createProgram();
+    var glProgram = gl.createProgram();
 
     // Link shaders
-    GL.attachShader(glProgram, vertexShader)
-    GL.attachShader(glProgram, fragmentShader)
-    GL.linkProgram(glProgram)
+    gl.attachShader(glProgram, vertexShader)
+    gl.attachShader(glProgram, fragmentShader)
+    gl.linkProgram(glProgram)
 
-    if (!GL.getProgramParameter(glProgram, GL.LINK_STATUS)) {
+    if (!gl.getProgramParameter(glProgram, gl.LINK_STATUS)) {
         alert("Unable to initialize the shader program");
         return -1;
     }
 
     // Use program
-    GL.useProgram(glProgram);
+    gl.useProgram(glProgram);
 
     return glProgram;
 }
 
 // Bind Vertex Buffer Object
-function bindVertexBuffers() {
+function bindVertexBuffers(gl) {
 
-    if (GL < 0){
+    if (gl < 0){
         alert("GL context not initialized.")
         return -1
     }
@@ -110,22 +104,22 @@ function bindVertexBuffers() {
     ]);
 
     // Create a buffer object
-    const vertexBuffer = GL.createBuffer();
-    GL.bindBuffer(GL.ARRAY_BUFFER, vertexBuffer);
-    GL.bufferData(GL.ARRAY_BUFFER, vertices, GL.STATIC_DRAW);
+    const vertexBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+    gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
 
-    const indexBuffer = GL.createBuffer();
-    GL.bindBuffer(GL.ELEMENT_ARRAY_BUFFER, indexBuffer)
-    GL.bufferData(GL.ELEMENT_ARRAY_BUFFER, indices, GL.STATIC_DRAW)
+    const indexBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer)
+    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, indices, gl.STATIC_DRAW)
 
     // Assign the vertices in buffer object to a_Position variable
     const stride = 5 * Float32Array.BYTES_PER_ELEMENT;
 
-    GL.vertexAttribPointer(0, 3, GL.FLOAT, false, stride, 0);
-    GL.enableVertexAttribArray(0);
+    gl.vertexAttribPointer(0, 3, gl.FLOAT, false, stride, 0);
+    gl.enableVertexAttribArray(0);
 
-    GL.vertexAttribPointer(1, 2, GL.FLOAT, false, stride, 3 * Float32Array.BYTES_PER_ELEMENT)
-    GL.enableVertexAttribArray(1);
+    gl.vertexAttribPointer(1, 2, gl.FLOAT, false, stride, 3 * Float32Array.BYTES_PER_ELEMENT)
+    gl.enableVertexAttribArray(1);
 
     // Return number of vertices
     return indices.length;
@@ -133,52 +127,52 @@ function bindVertexBuffers() {
 
 let N_VERTICES = -1
 
-async function init(){
+async function init(canvasID){
     // Get canvas
-    CANVAS = document.getElementById("cubeUVs");
+    const canvas = document.getElementById(canvasID);
 
     // Init WebGL
-    GL = CANVAS.getContext("webgl");
-    if (!GL){
+    const gl = canvas.getContext("webgl");
+    if (!gl){
         console.log("Failed to get the WebGL rendering context!")
         return;
     }
 
     // Init shaders
-    PROGRAM = await initShaders( '/blog/pixel_perfect_lighting/vertex.glsl', '/blog/pixel_perfect_lighting/fragment.glsl')
-    if (PROGRAM < 0){
+    const program = await initShaders(gl, '/blog/pixel_perfect_lighting/vertex.glsl', '/blog/pixel_perfect_lighting/fragment.glsl')
+    if (program < 0){
         console.log("Failed to initialize shaders!")
         return;
     }
 
     // Settings
-    GL.enable(GL.CULL_FACE)
+    gl.enable(gl.CULL_FACE)
 
     // Write the positions of vertices to a vertex shader
-    N_VERTICES = bindVertexBuffers();
+    const n_vertices = bindVertexBuffers(gl);
 
-    requestAnimationFrame(tick)
+    requestAnimationFrame((t) => tick(t, gl, canvas, program, n_vertices))
 }
 
-function tick(currentTime){
+function tick(currentTime, gl, canvas, program, n_vertices){
 
-    if (CANVAS < 0){
+    if (canvas < 0){
         alert("Canvas not initialized.")
         return -1
     }
     
-    if (GL < 0){
+    if (gl < 0){
         alert("GL context not initialized.")
         return -1
     }
 
-    if (PROGRAM < 0){
+    if (program < 0){
         alert("Shaders not initialized.")
         return -1
     }
 
-    GL.clearColor(1.0, 1.0, 1.0, 1.0);
-    GL.clear(GL.COLOR_BUFFER_BIT);
+    gl.clearColor(1.0, 1.0, 1.0, 1.0);
+    gl.clear(gl.COLOR_BUFFER_BIT);
 
     const m4 = glMatrix.mat4
     const model = m4.create();
@@ -187,26 +181,38 @@ function tick(currentTime){
 
     const view = m4.create();
     m4.lookAt(view,
-    [0, 1, 2.5], 
-    [0, 0, 0],
-    [0, 1, 0]
+                [0, 1, 2.5], 
+                [0, 0, 0],
+                [0, 1, 0]
     );
 
     const projection = m4.create();
-    m4.perspective(projection,
-    Math.PI / 4,
-    CANVAS.width / CANVAS.height,
-    0.1,
-    100.0
-    );
+    /*m4.perspective(projection,
+                    Math.PI / 4,
+                    canvas.width / canvas.height,
+                    0.1,
+                    100.0
+    );*/
+    const left = -canvas.width / 2;
+    const right = canvas.width / 2;
+    const bottom = -canvas.height / 2;
+    const top = canvas.height / 2;
+    const near = 0.1;
+    const far = 100.0;
+
+    const factor = 0.005
+
+    m4.ortho(projection, left * factor, right * factor, bottom * factor, top * factor, near, far);
+
+    
 
     // Draw
-    GL.uniformMatrix4fv(GL.getUniformLocation(PROGRAM, "u_model"), false, model)
-    GL.uniformMatrix4fv(GL.getUniformLocation(PROGRAM, "u_view"), false, view)
-    GL.uniformMatrix4fv(GL.getUniformLocation(PROGRAM, "u_projection"), false, projection)
+    gl.uniformMatrix4fv(gl.getUniformLocation(program, "u_model"), false, model)
+    gl.uniformMatrix4fv(gl.getUniformLocation(program, "u_view"), false, view)
+    gl.uniformMatrix4fv(gl.getUniformLocation(program, "u_projection"), false, projection)
 
-    GL.drawElements(GL.TRIANGLES, N_VERTICES, GL.UNSIGNED_SHORT, 0)
+    gl.drawElements(gl.TRIANGLES, n_vertices, gl.UNSIGNED_SHORT, 0)
 
 
-    requestAnimationFrame(tick)
+    requestAnimationFrame((t) => tick(t, gl, canvas, program, n_vertices))
 }
