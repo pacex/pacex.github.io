@@ -13,7 +13,7 @@
       <link>http://localhost:1313/posts/pixel_perfect_lighting/</link>
       <pubDate>Mon, 30 Jun 2025 22:07:40 +0200</pubDate>
       <guid>http://localhost:1313/posts/pixel_perfect_lighting/</guid>
-      <description>&lt;script src=&#34;http://localhost:1313/blog/pixel_perfect_lighting/gl-matrix-min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;http://localhost:1313/blog/pixel_perfect_lighting/draw.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;body onload=&#34;init(&#39;cubeUVs&#39;)&#34;&gt;&#xD;&#xA;    &lt;canvas id=&#34;cubeUVs&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;&#xD;&#xA;&lt;/body&gt;</description>
+      <description>&lt;script src=&#34;http://localhost:1313/blog/pixel_perfect_lighting/gl-matrix-min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;http://localhost:1313/blog/pixel_perfect_lighting/draw.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;window.addEventListener(&#39;load&#39;, () =&gt; {&#xD;&#xA;    init(&#39;cubeUVs&#39;);&#xD;&#xA;    init(&#39;cubeUVs2&#39;);&#xD;&#xA;});&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet&#xA;&lt;canvas id=&#34;cubeUVs&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;&lt;/canvas&gt;&#xA;Lorem ipsum dolor sit amet.&#xA;&lt;canvas id=&#34;cubeUVs2&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;&lt;/canvas&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bringing Characters to Life: The Fundamentals of Skeletal Animation</title>
