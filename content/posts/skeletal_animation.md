@@ -1,8 +1,12 @@
-+++
-title = 'Bringing Characters to Life: The Fundamentals of Skeletal Animation'
-date = 2024-11-22
-draft = false
-+++
+
+---
+title: 'Bringing Characters to Life: The Fundamentals of Skeletal Animation'
+date: 2024-11-22
+tags:
+categories:
+draft: false
+
+---
 
 When rendering a 3D game's world, static meshes are often sufficient for modeling the environment like terrain, buildings and other objects.
 However, if we want it to appear inhabited, we won't get around filling the world with creatures and characters that move and interact.
