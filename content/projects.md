@@ -4,6 +4,17 @@ date = 2025-07-19
 draft = false
 +++
 
+## CarMaker
+
+since 2025, *Professional*
+
+CarMaker is a simulation environment for vehicle development.
+As a software developer at IPG Automotive I contribute to the development and maintenance of its visualization tool Movie NX.
+
+[CarMaker](https://www.ipg-automotive.com/solutions/product-portfolio/carmaker)
+
+---
+
 ## Neural Surface Compression
 
 2024, *Research, Education, Master Thesis*
