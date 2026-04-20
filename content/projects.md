@@ -19,9 +19,9 @@ As a software developer at IPG Automotive I contribute to the development and ma
 
 2024, *Research, Education, Master Thesis*
 
-Neural compression models are not restricted to texture space inputs.
-This is a research piece on a neural texture compression method that parameterizes material data on the object's surface, circumventing the need for UV-mapping.
-I examine if the method can achieve sufficient visual quality at high compression rates without the requiring 3D models to be UV-mapped.
+This is a research piece on a neural alternative to traditional texture mapping.
+It distributes learnable parameters according to a hierarchical subdivision of a triangle mesh and trains them to represent albedo, surface normals and other material properties.
+We examine if the method can achieve sufficient visual quality at high compression rates.
 
 [Paper](https://gupea.ub.gu.se/handle/2077/84873), [Source](https://github.com/pacex/neural-surface)
 
